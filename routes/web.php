@@ -18,4 +18,10 @@ Route::get('/', function () {
 });
 
 route::get('/comunas', [ComunaController::class, 'index'])->name('comunas.index');
+route::post('/comunas', [ComunaController::class, 'store'])->name('comunas.store');
+route::get('/comunas/create', [ComunaController::class, 'create'])->name('comunas.create');
+route::delete('/comunas/{comuna}', [ComunaController::class, 'destroy'])->name('comunas.destroy');
+route::put('/comunas/{comuna}', [ComunaController::class, 'update'])->name('comunas.update');
+route::get('/comunas/{comuna}/edit', [ComunaController::class, 'edit'])->name('comunas.edit');
+
 
