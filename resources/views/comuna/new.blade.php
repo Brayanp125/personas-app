@@ -37,6 +37,16 @@
         </select>
     </div>
 
+     <div class="mb-3">
+        <label for="pais_codi" class="form-label">Pais:</label>
+        <select class="form-select" id="pais_codi" name="pais_codi" required>
+            <option selected disabled value="">Choose one...</option>
+            @foreach ($paises as $pais)
+                <option value="{{ $pais->pais_codi }}">{{ $pais->pais_nomb }}</option>
+            @endforeach
+        </select>
+    </div>
+
     <div class="mt-3">
         <button type="submit" class="btn btn-primary">Save</button>
         <a href="{{ route('comunas.index') }}" class="btn btn-warning">Cancel</a>
